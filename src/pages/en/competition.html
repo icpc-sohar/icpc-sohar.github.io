@@ -1,0 +1,68 @@
+<!--meta {"title": "The contest", "description": "What the ICPC is, how a result is scored, why balloons, and the road from the North Al Batinah qualifiers to the World Finals. Plus a quick level check."}-->
+<header class="page-head"><div class="wrap">
+  <h1>What is the ICPC?</h1>
+  <p class="lead">The International Collegiate Programming Contest (ICPC) is the oldest and most prestigious programming contest for university students. Teams race to solve as many algorithmic problems as possible in the least time.</p>
+</div></header>
+
+<section class="section" aria-labelledby="rule"><div class="wrap grid">
+  <div class="contest-text">
+    <div><h2 id="rule">The official rule</h2></div>
+    <p>A team of three students, one computer, and five hours to solve as many problems as possible. Teams are ranked by problems solved first; on a tie, the team with the lower time goes ahead, and every wrong attempt on a problem solved later adds a 20-minute penalty.</p>
+    <dl class="spec"><div><dt>3</dt><dd>students per team</dd></div><div><dt>1</dt><dd>computer to share</dd></div><div><dt>5</dt><dd>hours of contest</dd></div><div><dt>6</dt><dd>problems or more</dd></div></dl>
+    <h3>The balloons</h3>
+    <p class="muted">Every problem has a colour. When your solution is accepted, a balloon of that colour arrives and is tied above your team's desk. Each balloon is a solved problem, and the more balloons you have, the higher you rank.</p>
+    <a class="link" href="https://icpc.global">Official ICPC website</a>
+  </div>
+  <div class="sim" data-sim data-you="Your team" data-rival="Rival team" data-problem="Problem" data-minute="solved at minute" data-rejected="rejected attempt before it">
+    <div class="sim-head"><span>Try it yourself</span><span>Tap a problem to solve it or undo it</span></div>
+    <ol class="problems" aria-label="Your team's problems"></ol>
+    <table class="standings">
+      <caption class="sr-only">Current standings</caption>
+      <thead><tr><th scope="col">#</th><th scope="col">Team</th><th scope="col" class="n">Solved</th><th scope="col" class="n">Time</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="status" aria-live="polite"></p>
+    <script type="application/json" data-msgs>{
+      "ahead": "You lead because you solved {ys} problems to their {rs}. The number of problems decides first.",
+      "behind": "The rival solved {rs} problems and you solved {ys}. Solve one more to catch up.",
+      "tieWin": "You are level on problems, and you lead because your time is {yt} minutes to their {rt}.",
+      "tieLose": "You are level on problems, but your time is {yt} minutes to their {rt}, so the rival goes ahead. Your rejected attempts raised your time."
+    }</script>
+  </div>
+</div></section>
+
+<section class="section tight" aria-labelledby="road"><div class="wrap">
+  <div class="sec-head"><h2 id="road">The road to the World Finals</h2></div>
+  <ol class="path">
+    <li><h3>Regional qualifiers</h3><p>At governorate level, such as the North Al Batinah qualifiers</p></li>
+    <li><h3>National (OCPC)</h3><p>Oman Collegiate Programming Contest</p></li>
+    <li><h3>Regional (ACPC)</h3><p>Africa and Arab Collegiate Programming Championship</p></li>
+    <li><h3>World Finals</h3><p>The world's best teams</p></li>
+  </ol>
+</div></section>
+
+<section class="section tight" aria-labelledby="quiz"><div class="wrap">
+  <div class="sec-head"><h2 id="quiz">Check your level</h2><p class="muted">5 quick questions, no pressure. We will suggest the right track for you to start from.</p></div>
+  <div class="quiz" data-quiz data-join="{{root}}en/join/">
+    <div class="quiz-top"><span class="quiz-count" aria-live="polite"></span></div>
+    <div class="quiz-bar" aria-hidden="true"><i></i></div>
+    <div class="quiz-body"></div>
+    <div class="quiz-nav"><button class="btn btn-ghost" type="button" data-prev>Back</button><button class="btn btn-sun" type="button" data-next>Next</button></div>
+    <noscript><p>The quiz needs JavaScript. You can join directly from the Join page.</p></noscript>
+    <script type="application/json" data-quiz-data>{
+      "ui": {"question": "Question", "of": "of", "next": "Next", "result": "Show my result", "again": "Take it again", "track": "Your suggested track", "join": "Join the club"},
+      "questions": [
+        {"q": "Have you written code before?", "options": [["No, never", 0], ["A little, in a course", 1], ["Yes, regularly", 2], ["Yes, and I have solved problems on Codeforces or LeetCode", 3]]},
+        {"q": "What does this code print?", "code": "total = 0\nfor i in range(1, 5):\n    total += i\nprint(total)", "options": [["15", 0], ["10", 2], ["4", 0], ["I'm not sure", 0]]},
+        {"q": "Which data structure is fastest (on average) for checking whether a value exists?", "options": [["A plain array", 0], ["A linked list", 0], ["A sorted array with binary search", 1], ["A hash set", 2]]},
+        {"q": "Roughly how many steps does binary search need on a million sorted numbers?", "options": [["20", 2], ["1,000", 0], ["500,000", 0], ["1,000,000", 0]]},
+        {"q": "How familiar are you with dynamic programming or graph algorithms (BFS/DFS)?", "options": [["Never heard of them", 0], ["I've only heard of them", 1], ["I've used them once or twice", 2], ["I use them regularly", 3]]}
+      ],
+      "results": [
+        {"min": 9, "title": "Advanced", "text": "Excellent level. Your place is in contest-team training: graphs, dynamic programming, number theory and team strategy. Try out for the teams."},
+        {"min": 5, "title": "Intermediate", "text": "You have a good base. Next: sorting, binary search, greedy algorithms, and practising timed contests."},
+        {"min": 0, "title": "Beginner", "text": "A good start; every champion began here. We will start with the basics: variables, loops, arrays, and your first solved problems."}
+      ]
+    }</script>
+  </div>
+</div></section>

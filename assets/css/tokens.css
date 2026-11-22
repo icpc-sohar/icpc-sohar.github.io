@@ -1,0 +1,134 @@
+/* Design tokens — ICPC Sohar University Club.
+   The only place raw values live. Documented in DESIGN-SYSTEM.md section 4. */
+:root {
+  /* Brand colour (unchanged from the legacy site) */
+  --navy: #0B427B;
+  --navy-deep: #08325E;
+  --sky: #1561A4;
+  --sun: #F2B43C;
+  --ruby: #BA2735;
+  --ink: #0F1A2A;
+  --ink-soft: #16243A;
+  --ink-line: #24354F;
+  --surface: #F6F8FB;
+  --white: #FFFFFF;
+
+  /* Derived colour (contrast-safe companions, never replacements) */
+  --sun-text: #8A5A00;        /* yellow as text on light: 5.57:1 */
+  --sky-on-dark: #7FB8EC;     /* 4.79:1 on navy */
+  --ruby-on-dark: #FF8A93;    /* 4.48:1 on navy (large text / graphics) */
+  --text: var(--ink);
+  --text-muted: #4A5A70;      /* 6.61:1 on surface */
+  --text-on-dark: #FFFFFF;
+  --text-on-dark-muted: #D5DEEA;
+  --line: #D9E0EA;
+  --line-on-dark: rgb(255 255 255 / 0.16);
+
+  /* Spacing: strict 4/8 scale */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --section-y: var(--s-8);
+
+  /* Radius: three values only */
+  --r-sm: 4px;
+  --r-lg: 8px;
+  --r-pill: 999px;
+
+  /* Elevation: one shadow, floating elements only */
+  --shadow-float: 0 8px 32px rgb(15 26 42 / 0.16);
+
+  /* Type */
+  --font-ar: 'IBM Plex Sans Arabic', 'Archivo', system-ui, sans-serif;
+  --font-latin: 'Archivo', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-display: 800;          /* Archivo only: "ICPC" and numerals */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --fs-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --fs-xl: clamp(1.375rem, 1.2rem + 0.9vw, 1.875rem);
+  --fs-2xl: clamp(1.75rem, 1.4rem + 1.8vw, 2.75rem);
+  --fs-3xl: clamp(2.125rem, 1.5rem + 3.2vw, 4rem);
+  --fs-4xl: clamp(2.375rem, 1.4rem + 4.4vw, 4.75rem);  /* homepage headline only */
+  --fs-num: clamp(2.5rem, 1.9rem + 3vw, 4.5rem);
+  --lh-body: 1.75;
+  --lh-head: 1.35;
+  --lh-tight: 1.1;
+  --measure: 65ch;
+
+  /* Layout: 4 columns by default (mobile first) */
+  --cols: 4;
+  --gutter: 16px;
+  --margin: 16px;
+  --maxw: 1200px;
+  --header-h: 64px;
+  --tap: 44px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-logo: cubic-bezier(0.2, 0.9, 0.25, 1);
+  --dur-1: 150ms;
+  --dur-2: 300ms;
+  --dur-3: 600ms;
+}
+
+/* Theme layer. Light is the default; [data-theme="dark"] swaps semantic tokens only.
+   The brand colours above never change between themes. Components use these names. */
+:root, :root[data-theme="light"] {
+  color-scheme: light;
+  --bg: var(--surface);
+  --bg-raised: var(--white);
+  --bg-sunk: #EBF0F6;
+  --text-faint: #617088;       /* 4.72:1 on bg: the lowest that still passes, for words waiting to light up */
+  --heading: var(--navy);
+  --accent: var(--sky);          /* links, eyebrows, small accents */
+  --alert: var(--ruby);
+  --highlight: var(--sun-text);  /* yellow when used as text */
+  --focus: var(--sky);
+  --header-bg: var(--navy);
+  --footer-bg: var(--ink);
+  --join-bg: var(--navy);
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: var(--ink);
+  --bg-raised: var(--ink-soft);
+  --bg-sunk: #0A1320;
+  --text-faint: #8796AA;       /* 5.8:1 on ink */
+  --text: var(--white);
+  --text-muted: var(--text-on-dark-muted);
+  --line: var(--ink-line);
+  --heading: var(--white);
+  --accent: var(--sky-on-dark);
+  --alert: var(--ruby-on-dark);
+  --highlight: var(--sun);
+  --focus: var(--sun);
+  --header-bg: var(--navy-deep);
+  --footer-bg: #0A1320;
+  --join-bg: var(--navy-deep);
+  --shadow-float: 0 8px 32px rgb(0 0 0 / 0.45);
+}
+
+/* Breakpoints follow the content, not devices:
+   600px  two-column text starts to fit        -> 8 columns
+   960px  the six-link nav fits on one line     -> 12 columns
+   1280px margins can open up without long lines */
+@media (min-width: 600px) {
+  :root { --cols: 8; --gutter: 24px; --margin: 32px; --section-y: var(--s-9); }
+}
+@media (min-width: 960px) {
+  :root { --cols: 12; --margin: 48px; --header-h: 72px; }
+}
+@media (min-width: 1280px) {
+  :root { --gutter: 32px; --margin: 64px; }
+}

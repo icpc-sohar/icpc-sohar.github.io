@@ -1,0 +1,230 @@
+{
+ "_readme": "Single source of truth for the Team page. photo: null shows the initials card; set a path under assets/photos/ to switch to a photo card. experiences: [] keeps the member out of the Experiences section.",
+ "updated": "2026-11-23",
+ "founders": [
+  {
+   "id": "ahmed-kayed",
+   "name": {
+    "ar": "أ.د. أحمد كايد",
+    "en": "Prof. Ahmed Kayed"
+   },
+   "role": {
+    "ar": "عميد كلية الحاسوب وتقنية المعلومات",
+    "en": "FCIT Dean"
+   },
+   "photo": null
+  },
+  {
+   "id": "abdallah-mohamad",
+   "name": {
+    "ar": "د. عبدالله محمد",
+    "en": "Dr. Abdallah Mohamad"
+   },
+   "role": {
+    "ar": "مساعد العميد",
+    "en": "Assistant Dean"
+   },
+   "photo": null
+  },
+  {
+   "id": "ibrahem-abdelatief",
+   "name": {
+    "ar": "د. إبراهيم عبداللطيف",
+    "en": "Dr. Ibrahem Abdelatief"
+   },
+   "role": {
+    "ar": "مشرف النادي",
+    "en": "Supervisor"
+   },
+   "photo": null
+  },
+  {
+   "id": "mariam-al-jabri",
+   "name": {
+    "ar": "د. مريم الجابري",
+    "en": "Dr. Mariam Al-Jabri"
+   },
+   "role": {
+    "ar": "مشرفة النادي",
+    "en": "Supervisor"
+   },
+   "photo": null
+  }
+ ],
+ "advisors": [
+  {
+   "id": "akmal-alaraby",
+   "name": {
+    "ar": "أكمل ممدوح",
+    "en": "Akmal Mamdouh Alaraby"
+   },
+   "role": {
+    "ar": "Advisor",
+    "en": "Advisor"
+   },
+   "photo": null
+  }
+ ],
+ "board": [
+  {
+   "id": "head",
+   "order": 1,
+   "name": {
+    "ar": "عذوب حسن المعمري",
+    "en": "Athoub Hassan Al Mamari"
+   },
+   "role": "Head",
+   "department": {
+    "ar": "الرئاسة",
+    "en": "Leadership"
+   },
+   "photo": "assets/img/team/head.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "vice",
+   "order": 2,
+   "name": {
+    "ar": "فاطمة طالب العجمي",
+    "en": "Fatma Taleb Al Ajmi"
+   },
+   "role": "Vice",
+   "department": {
+    "ar": "الرئاسة",
+    "en": "Leadership"
+   },
+   "photo": "assets/img/team/vice.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "technical-head",
+   "order": 3,
+   "name": {
+    "ar": "عبدالسلام مبارك عبيد الدرعي",
+    "en": "Abdulsalam Mubarak Obaid Aldarie"
+   },
+   "role": "Technical Head",
+   "department": {
+    "ar": "الفريق التقني",
+    "en": "Technical"
+   },
+   "photo": "assets/img/team/technical-head.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "technical-vice",
+   "order": 4,
+   "name": {
+    "ar": "أيمن بن سعد الشقري",
+    "en": "Ayman Said Al-Shaqri"
+   },
+   "role": "Technical Vice",
+   "department": {
+    "ar": "الفريق التقني",
+    "en": "Technical"
+   },
+   "photo": "assets/img/team/technical-vice.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "hr-head",
+   "order": 5,
+   "name": {
+    "ar": "أحمد الهابيل",
+    "en": "Ahmad Habil"
+   },
+   "role": "HR Head",
+   "department": {
+    "ar": "الموارد البشرية",
+    "en": "HR"
+   },
+   "photo": "assets/img/team/hr-head.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "hr-vice",
+   "order": 6,
+   "name": {
+    "ar": "مريم خالد الشيدي",
+    "en": "Maryam Khalid Alshidi"
+   },
+   "role": "HR Vice",
+   "department": {
+    "ar": "الموارد البشرية",
+    "en": "HR"
+   },
+   "photo": "assets/img/team/hr-vice.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "pr-head",
+   "order": 7,
+   "name": {
+    "ar": "مؤيد بن علي الفريسي",
+    "en": "Muayad Ali AlFarisi"
+   },
+   "role": "PR Head",
+   "department": {
+    "ar": "العلاقات العامة",
+    "en": "PR"
+   },
+   "photo": "assets/img/team/pr-head.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "pr-vice",
+   "order": 8,
+   "name": {
+    "ar": "شيماء عبدالله السعيدي",
+    "en": "Shimaa Abdullah Alsaidi"
+   },
+   "role": "PR Vice",
+   "department": {
+    "ar": "العلاقات العامة",
+    "en": "PR"
+   },
+   "photo": "assets/img/team/pr-vice.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "media-head",
+   "order": 9,
+   "name": {
+    "ar": "محمد سليمان الشحي",
+    "en": "Mohammed Suliman Alshehi"
+   },
+   "role": "Media Head",
+   "department": {
+    "ar": "الإعلام",
+    "en": "Media"
+   },
+   "photo": "assets/img/team/media-head.webp",
+   "links": {},
+   "experiences": []
+  },
+  {
+   "id": "media-vice",
+   "order": 10,
+   "name": {
+    "ar": "لارا محمد علي حبايب",
+    "en": "Lara Mohammed Ali Habayeb"
+   },
+   "role": "Media Vice",
+   "department": {
+    "ar": "الإعلام",
+    "en": "Media"
+   },
+   "photo": "assets/img/team/media-vice.webp",
+   "links": {},
+   "experiences": []
+  }
+ ]
+}
